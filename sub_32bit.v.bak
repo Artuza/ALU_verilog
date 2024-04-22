@@ -1,0 +1,18 @@
+module sub_32bit(
+    input [31:0] a,
+    input [31:0] b,
+    output reg [31:0] diff,
+    output reg ZeroFlag,  // Bandera que indica si el resultado es cero
+    output reg NegativeFlag  // Bandera que indica si el resultado es negativo
+);
+
+    // Realizar la substracción y actualizar las banderas
+    always @(a or b) begin
+        diff = a - b;  // Realiza la substracción
+
+        // Actualizar las banderas
+        ZeroFlag = (diff == 0);  // True si el resultado es 0
+        NegativeFlag = diff[31];  // True si el bit más significativo es 1 (número negativo en complemento a dos)
+    end
+
+endmodule

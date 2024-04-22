@@ -1,0 +1,13 @@
+module add_32bit(
+    input [31:0] a,
+    input [31:0] b,
+    output [31:0] sum
+);
+    // Utiliza half_adder para cada bit
+    genvar i;
+    generate
+        for (i = 0; i < 32; i = i + 1) begin : adder_loop
+            half_adder ha(a[i], b[i], sum[i]);
+        end
+    endgenerate
+endmodule

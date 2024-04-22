@@ -1,0 +1,8 @@
+module half_adder(
+    input a,
+    input b,
+    output sum
+);
+    // La suma se puede calcular como una operación XOR entre los dos bits.
+    assign sum = a ^ b;
+endmodule

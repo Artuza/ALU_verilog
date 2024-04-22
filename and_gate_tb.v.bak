@@ -1,0 +1,39 @@
+`timescale 1ns / 1ps
+
+module and_gate_tb;
+
+    // Entradas
+    reg a;
+    reg b;
+
+    // Salidas
+    wire y;
+
+    // Instancia del módulo and_gate a probar
+    and_gate uut (
+        .a(a), 
+        .b(b), 
+        .y(y)
+    );
+
+    // Proceso para aplicar estímulos
+    initial begin
+        // Inicializar entradas
+        a = 0;
+        b = 0;
+
+        // Mostrar valores de las entradas y salidas en la consola
+        $monitor("Time=%t | a=%b, b=%b -> y=%b", $time, a, b, y);
+
+        // Probar diferentes combinaciones de entradas
+        #10 a = 0; b = 0;
+        #10 a = 0; b = 1;
+        #10 a = 1; b = 0;
+        #10 a = 1; b = 1;
+
+        // Esperar un poco antes de finalizar la simulación
+        #10;
+        $finish;
+    end
+
+endmodule

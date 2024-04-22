@@ -1,0 +1,399 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Logica programable/ALU/simulation/modelsim
+vadd_with_carry_32bit
+Z1 !s110 1713151622
+!i10b 1
+!s100 CmO>F5f[FbCBo0g3e6`<13
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;W`7Q34k]m6A>kPVPT81l3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1713132213
+8D:/Logica programable/ALU/add_with_carry_32bit.v
+FD:/Logica programable/ALU/add_with_carry_32bit.v
+!i122 0
+L0 1 23
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1713151621.000000
+!s107 D:/Logica programable/ALU/add_with_carry_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/add_with_carry_32bit.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+D:/Logica programable/ALU}
+Z7 tCvgOpt 0
+valu
+Z8 !s110 1713151623
+!i10b 1
+!s100 <L?jjNKOm5E46:1ok52kL1
+R2
+Ik>XR_mLP:CDaa<4Rk60iW1
+R3
+R0
+w1713142468
+8D:/Logica programable/ALU/alu.v
+FD:/Logica programable/ALU/alu.v
+!i122 11
+L0 1 65
+R4
+r1
+!s85 0
+31
+Z9 !s108 1713151623.000000
+!s107 D:/Logica programable/ALU/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/alu.v|
+!i113 1
+R5
+R6
+R7
+vand_gate
+R1
+!i10b 1
+!s100 Ue@PJVYm[h[D4e[[MXm0h1
+R2
+IR:7SH538UbDP7:];LQ4XC0
+R3
+R0
+w1713133123
+8D:/Logica programable/ALU/and_gate.v
+FD:/Logica programable/ALU/and_gate.v
+!i122 2
+L0 1 11
+R4
+r1
+!s85 0
+31
+Z10 !s108 1713151622.000000
+!s107 D:/Logica programable/ALU/and_gate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/and_gate.v|
+!i113 1
+R5
+R6
+R7
+vands_32bit
+R1
+!i10b 1
+!s100 93EUIn4BjHLfo^LnZd>n52
+R2
+IjMJ60ch?9BmGDF?VDkmRc0
+R3
+R0
+w1713133147
+8D:/Logica programable/ALU/ands_32bit.v
+FD:/Logica programable/ALU/ands_32bit.v
+!i122 3
+Z11 L0 1 12
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Logica programable/ALU/ands_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/ands_32bit.v|
+!i113 1
+R5
+R6
+R7
+vcomplement_to_two
+R8
+!i10b 1
+!s100 8]?35J]?Fn<BZNHK_Q;mR0
+R2
+I:IinDnjYVH4P`c_oPV6240
+R3
+R0
+w1713133820
+8D:/Logica programable/ALU/complement_to_two.v
+FD:/Logica programable/ALU/complement_to_two.v
+!i122 7
+L0 1 6
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/Logica programable/ALU/complement_to_two.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/complement_to_two.v|
+!i113 1
+R5
+R6
+R7
+vCPU
+Z12 !s110 1713151624
+!i10b 1
+!s100 M<JKI2AFh@^gkalilX4dl2
+R2
+IT]2cM19^:762EaH?>G4YK2
+R3
+R0
+w1713145157
+8D:/Logica programable/ALU/CPU.v
+FD:/Logica programable/ALU/CPU.v
+!i122 14
+L0 1 58
+R4
+r1
+!s85 0
+31
+Z13 !s108 1713151624.000000
+!s107 D:/Logica programable/ALU/CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/CPU.v|
+!i113 1
+R5
+R6
+R7
+n@c@p@u
+vfull_adder
+R1
+!i10b 1
+!s100 XWY^jjH]T@:4zU4I>B1X30
+R2
+I_1NF]MbM50P]mbdc3ofBQ3
+R3
+R0
+w1713132219
+8D:/Logica programable/ALU/full_adder.v
+FD:/Logica programable/ALU/full_adder.v
+!i122 1
+R11
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Logica programable/ALU/full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/full_adder.v|
+!i113 1
+R5
+R6
+R7
+vfull_subtractor
+R8
+!i10b 1
+!s100 DmzPY@?BKizk@Ra3?fLC52
+R2
+I`:PL@7`7cE^MOa6;3:4Ue2
+R3
+R0
+w1713134123
+8D:/Logica programable/ALU/full_subtractor.v
+FD:/Logica programable/ALU/full_subtractor.v
+!i122 9
+L0 1 10
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/Logica programable/ALU/full_subtractor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/full_subtractor.v|
+!i113 1
+R5
+R6
+R7
+vmultiplier_32bit
+R1
+!i10b 1
+!s100 DE<B8nO9jiN1V^^aHd?kg3
+R2
+I;XJ7X67SJN>ejl>J>9ACU1
+R3
+R0
+w1713133577
+8D:/Logica programable/ALU/multiplier_32bit.v
+FD:/Logica programable/ALU/multiplier_32bit.v
+!i122 4
+L0 1 22
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Logica programable/ALU/multiplier_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/multiplier_32bit.v|
+!i113 1
+R5
+R6
+R7
+vor_gate
+R1
+!i10b 1
+!s100 ^=jf=0cA=O7Nzjf>dP7QV3
+R2
+I8=AHXX>joa08>KD7NE=XE0
+R3
+R0
+w1713133698
+8D:/Logica programable/ALU/or_gate.v
+FD:/Logica programable/ALU/or_gate.v
+!i122 5
+L0 1 14
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Logica programable/ALU/or_gate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/or_gate.v|
+!i113 1
+R5
+R6
+R7
+vorrs_32bit
+R8
+!i10b 1
+!s100 ODD:?F6cI:[61YPoR7QmL0
+R2
+I9AD`I:WF0IMUU>Kc5UKNA3
+R3
+R0
+w1713133732
+8D:/Logica programable/ALU/orrs_32bit.v
+FD:/Logica programable/ALU/orrs_32bit.v
+!i122 6
+R11
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Logica programable/ALU/orrs_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/orrs_32bit.v|
+!i113 1
+R5
+R6
+R7
+vProgramCounter
+R8
+!i10b 1
+!s100 b>C1@Co=]On3_ibXEWWA72
+R2
+IZ4nLoO:KSE48D0D`1HPKB0
+R3
+R0
+w1713150980
+8D:/Logica programable/ALU/ProgramCounter.v
+FD:/Logica programable/ALU/ProgramCounter.v
+!i122 12
+L0 1 18
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/Logica programable/ALU/ProgramCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/ProgramCounter.v|
+!i113 1
+R5
+R6
+R7
+n@program@counter
+vProgramMemory
+R12
+!i10b 1
+!s100 Yh:I?Z4DX=^S<D>m^?8X83
+R2
+Ihe4;EBeoHL]E?S;hE^b;o3
+R3
+R0
+w1713144413
+8D:/Logica programable/ALU/ProgramMemory.v
+FD:/Logica programable/ALU/ProgramMemory.v
+!i122 13
+L0 1 25
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/Logica programable/ALU/ProgramMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/ProgramMemory.v|
+!i113 1
+R5
+R6
+R7
+n@program@memory
+vrsbs_32bit
+R8
+!i10b 1
+!s100 N5Ihb9^UhhOQ6XQ?;2PnZ0
+R2
+IF=cE[g`AKBzIoXSEJh6En2
+R3
+R0
+w1713134009
+8D:/Logica programable/ALU/rsbs_32bit.v
+FD:/Logica programable/ALU/rsbs_32bit.v
+!i122 8
+L0 1 9
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/Logica programable/ALU/rsbs_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/rsbs_32bit.v|
+!i113 1
+R5
+R6
+R7
+vsubtractor_32bit
+R8
+!i10b 1
+!s100 `0=9CVAFF0A2:ET:D[<;13
+R2
+INbodN1:K_[BA9VV>Df7Y72
+R3
+R0
+w1713141398
+8D:/Logica programable/ALU/subtractor_32bit.v
+FD:/Logica programable/ALU/subtractor_32bit.v
+!i122 10
+L0 1 19
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/Logica programable/ALU/subtractor_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/subtractor_32bit.v|
+!i113 1
+R5
+R6
+R7
+vtestbench_CPU
+R12
+!i10b 1
+!s100 =e5c`;^I<343n=LTRV`K`3
+R2
+IRUIiIkG;QOL>RoC3=^VSA0
+R3
+R0
+w1713151536
+8D:/Logica programable/ALU/testbench_CPU.v
+FD:/Logica programable/ALU/testbench_CPU.v
+!i122 16
+L0 3 47
+R4
+r1
+!s85 0
+31
+R13
+!s107 D:/Logica programable/ALU/testbench_CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Logica programable/ALU|D:/Logica programable/ALU/testbench_CPU.v|
+!i113 1
+R5
+R6
+R7
+ntestbench_@c@p@u

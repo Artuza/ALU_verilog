@@ -1,0 +1,61 @@
+`timescale 1ns / 1ps
+
+module tb_ALU;
+
+    reg [31:0] a, b;
+    reg [3:0] op_code;
+    reg cin;  // Input carry flag for operations that need it
+    wire [31:0] result;
+    wire cout, NegativeFlag, ZeroFlag;
+
+    // Instantiate the ALU module
+    alu myALU (
+        .a(a),
+        .b(b),
+        .op_code(op_code),
+        .cin(cin),
+        .result(result),
+        .cout(cout),
+    );
+
+    initial begin
+        // Initialize inputs
+        a = 0;
+        b = 0;
+        cin = 0;
+        op_code = 4'b0000; // Example opcode for a certain operation
+
+        // Add delay for simulation purpose
+        #10;
+        
+        // Test Case 1: ADD
+        a = 32'h0000_0001;  // 1
+        b = 32'h0000_0002;  // 2
+        op_code = 4'b0001;  // Assuming ADD is opcode 0001
+        #10;  // Wait for 10 time units
+
+        // Test Case 2: AND
+        a = 32'h0000_FFFF;
+        b = 32'hFFFF_0000;
+        op_code = 4'b0010;  // Assuming AND is opcode 0010
+        #10;
+
+        // Test Case 3: SUB
+        a = 32'h0000_0003;
+        b = 32'h0000_0001;
+        op_code = 4'b0011;  // Assuming SUB is opcode 0011
+        #10;
+
+        // Test Case 4: MUL
+        a = 32'h0000_0002;
+        b = 32'h0000_0003;
+        op_code = 4'b0100;  // Assuming MUL is opcode 0100
+        #10;
+
+        // Continue with other test cases for CMP, ORRS, RSBS, ADCS, SBCS
+
+        // Finish simulation
+        $finish;
+    end
+
+endmodule

@@ -1,0 +1,224 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do alu_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Intel/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/add_with_carry_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:01 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/add_with_carry_32bit.v 
+# -- Compiling module add_with_carry_32bit
+# 
+# Top level modules:
+# 	add_with_carry_32bit
+# End time: 21:27:02 on Apr 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/full_adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:02 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/full_adder.v 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 21:27:02 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/and_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:02 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/and_gate.v 
+# -- Compiling module and_gate
+# 
+# Top level modules:
+# 	and_gate
+# End time: 21:27:02 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/ands_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:02 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/ands_32bit.v 
+# -- Compiling module ands_32bit
+# 
+# Top level modules:
+# 	ands_32bit
+# End time: 21:27:02 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/multiplier_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:02 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/multiplier_32bit.v 
+# -- Compiling module multiplier_32bit
+# 
+# Top level modules:
+# 	multiplier_32bit
+# End time: 21:27:02 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/or_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:02 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/or_gate.v 
+# -- Compiling module or_gate
+# 
+# Top level modules:
+# 	or_gate
+# End time: 21:27:02 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/orrs_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:02 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/orrs_32bit.v 
+# -- Compiling module orrs_32bit
+# 
+# Top level modules:
+# 	orrs_32bit
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/complement_to_two.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/complement_to_two.v 
+# -- Compiling module complement_to_two
+# 
+# Top level modules:
+# 	complement_to_two
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/rsbs_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/rsbs_32bit.v 
+# -- Compiling module rsbs_32bit
+# 
+# Top level modules:
+# 	rsbs_32bit
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/full_subtractor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/full_subtractor.v 
+# -- Compiling module full_subtractor
+# 
+# Top level modules:
+# 	full_subtractor
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/subtractor_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/subtractor_32bit.v 
+# -- Compiling module subtractor_32bit
+# 
+# Top level modules:
+# 	subtractor_32bit
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/ProgramCounter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/ProgramCounter.v 
+# -- Compiling module ProgramCounter
+# 
+# Top level modules:
+# 	ProgramCounter
+# End time: 21:27:03 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/ProgramMemory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:03 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/ProgramMemory.v 
+# -- Compiling module ProgramMemory
+# 
+# Top level modules:
+# 	ProgramMemory
+# End time: 21:27:04 on Apr 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/CPU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:04 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/CPU.v 
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:27:04 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/testbench_CPU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:04 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/testbench_CPU.v 
+# -- Compiling module testbench_CPU
+# 
+# Top level modules:
+# 	testbench_CPU
+# End time: 21:27:04 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Logica\ programable/ALU {D:/Logica programable/ALU/testbench_CPU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:04 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Logica programable/ALU" D:/Logica programable/ALU/testbench_CPU.v 
+# -- Compiling module testbench_CPU
+# 
+# Top level modules:
+# 	testbench_CPU
+# End time: 21:27:04 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  testbench_CPU
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" testbench_CPU 
+# Start time: 21:27:04 on Apr 14,2024
+# Loading work.testbench_CPU
+# Loading work.CPU
+# Loading work.ProgramCounter
+# Loading work.ProgramMemory
+# Loading work.alu
+# Loading work.add_with_carry_32bit
+# Loading work.full_adder
+# Loading work.ands_32bit
+# Loading work.orrs_32bit
+# Loading work.rsbs_32bit
+# Loading work.complement_to_two
+# Loading work.subtractor_32bit
+# Loading work.full_subtractor
+# Loading work.multiplier_32bit
+# Loading work.and_gate
+# Loading work.or_gate
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'a'. The port definition is at: D:/Logica programable/ALU/full_adder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_CPU/uut/alu_unit/rsber/subtractor File: D:/Logica programable/ALU/rsbs_32bit.v Line: 8
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'b'. The port definition is at: D:/Logica programable/ALU/full_adder.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_CPU/uut/alu_unit/rsber/subtractor File: D:/Logica programable/ALU/rsbs_32bit.v Line: 8
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'sum'. The port definition is at: D:/Logica programable/ALU/full_adder.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_CPU/uut/alu_unit/rsber/subtractor File: D:/Logica programable/ALU/rsbs_32bit.v Line: 8
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time=                   0, ALU Result=xxxxxxxx, NegativeFlag=x, ZeroFlag=x
+# ** Note: $finish    : D:/Logica programable/ALU/testbench_CPU.v(40)
+#    Time: 640 ns  Iteration: 0  Instance: /testbench_CPU
+# 1
+# Break in Module testbench_CPU at D:/Logica programable/ALU/testbench_CPU.v line 40
+# End time: 21:27:55 on Apr 14,2024, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 3

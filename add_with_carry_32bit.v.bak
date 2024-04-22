@@ -1,0 +1,11 @@
+module add_with_carry_32bit(
+    input [31:0] a,      // Operando A de 32 bits
+    input [31:0] b,      // Operando B de 32 bits
+    input cin,           // Bit de acarreo de entrada
+    output [31:0] sum,   // Resultado de la suma de 32 bits
+    output cout          // Bit de acarreo de salida
+);
+
+assign {cout, sum} = a + b + cin;
+
+endmodule

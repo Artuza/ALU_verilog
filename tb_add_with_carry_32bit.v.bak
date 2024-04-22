@@ -1,0 +1,88 @@
+`timescale 1ns / 1ps
+
+module tb_add_with_carry_32bit;
+
+    // Inputs
+    reg [31:0] a;
+    reg [31:0] b;
+    reg cin;
+
+    // Outputs
+    wire [31:0] sum;
+    wire cout;
+
+    // Instantiate the Unit Under Test (UUT)
+    add_with_carry_32bit uut (
+        .a(a), 
+        .b(b), 
+        .cin(cin), 
+        .sum(sum), 
+        .cout(cout)
+    );
+
+    // Initial block to start the simulation
+    initial begin
+        // Initialize Inputs
+        a = 0;
+        b = 0;
+        cin = 0;
+
+        // Wait 100 ns for global reset to finish
+        #100;
+        
+        // Test Case 1: Simple Addition
+        a = 32'h00000001;
+        b = 32'h00000001;
+        cin = 0;
+        #10;
+
+        // Test Case 2: Addition with Carry-in
+        a = 32'hFFFFFFFF;
+		  b = 32'h00000001;
+		  cin = 1;
+		  #10;
+		  
+		      // Test Case 3: Large numbers
+    a = 32'h12345678;
+    b = 32'h87654321;
+    cin = 0;
+    #10;
+
+    // Test Case 4: All bits set
+    a = 32'hFFFFFFFF;
+    b = 32'hFFFFFFFF;
+    cin = 0;
+    #10;
+
+    // Test Case 5: Overflow with carry-out
+    a = 32'h80000000;
+    b = 32'h80000000;
+    cin = 0;
+    #10;
+
+    // Test Case 6: Random Example
+    a = 32'h0F0F0F0F;
+    b = 32'hF0F0F0F0;
+    cin = 1;
+    #10;
+
+    // Test Case 7: Zero Addition with Carry-in
+    a = 0;
+    b = 0;
+    cin = 1;
+    #10;
+
+    // Add more cases as required
+
+    // Finish the simulation
+    #100;
+    $finish;
+end
+
+// Optional: Display results to console
+initial begin
+    $monitor("At time %t, a = %h, b = %h, cin = %b -> sum = %h, cout = %b",
+             $time, a, b, cin, sum, cout);
+end
+  
+

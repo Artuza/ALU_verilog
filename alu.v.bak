@@ -1,0 +1,81 @@
+module ALU(
+    input [31:0] a,
+    input [31:0] b,
+    input [3:0] opcode,  // Asume 4 bits para el código de operación
+    output reg [31:0] result,
+    output reg ZeroFlag,
+    output reg CarryFlag,
+    output reg NegativeFlag,
+    output reg OverflowFlag
+);
+
+    // Instanciar módulos de operación
+    wire [31:0] add_result;
+    wire add_carry;
+    add_with_carry_32bit adder(
+        .a(a),
+        .b(b),
+        .cin(1'b0),
+        .sum(add_result),
+        .cout(add_carry)
+    );
+
+    wire [31:0] sub_result;
+    wire sub_borrow_out;
+    subtractor_32bit subtractor(
+        .a(a),
+        .b(b),
+        .bin(1'b0),
+        .diff(sub_result),
+        .bout(sub_borrow_out)
+    );
+
+    wire [31:0] and_result;
+    ands_32bit ands(
+        .a(a),
+        .b(b),
+        .y(and_result)
+    );
+
+    wire [31:0] or_result;
+    orrs_32bit ors(
+        .a(a),
+        .b(b),
+        .y(or_result)
+    );
+
+    wire [31:0] xor_result;
+    xors_32bit xors(
+        .a(a),
+        .b(b),
+        .y(xor_result)
+    );
+
+    wire [31:0] mul_result_low;
+    wire [31:0] mul_result_high;
+    multiplier_32bit multiplier(
+        .a(a),
+        .b(b),
+        .product({mul_result_high, mul_result_low})
+    );
+
+    always @(*) begin
+        case (opcode)
+            4'b0000: result = add_result;  // ADD
+            4'b0001: result = sub_result;  // SUB
+            4'b0010: result = and_result;  // AND
+            4'b0011: result = or_result;   // OR
+            4'b0100: result = xor_result;  // XOR
+            4'b0101: result = mul_result_low;  // MUL, lower 32 bits
+            // Añadir más operaciones según sea necesario
+            default: result = 32'h0000_0000;
+        endcase
+
+        // Actualizar las banderas de estado
+        ZeroFlag = (result == 0);
+        NegativeFlag = result[31];
+        CarryFlag = (opcode == 4'b0000) ? add_carry : 0;
+        OverflowFlag = ((opcode == 4'b0000) && (a[31] == b[31]) && (result[31] != a[31]));
+    end
+
+endmodule
