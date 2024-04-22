@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alu
-Tue Apr 16 10:20:41 2024
+Mon Apr 22 08:19:25 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Apr 16 10:20:41 2024       ;
+; Analysis & Elaboration Status      ; Successful - Mon Apr 22 08:19:24 2024       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
 ; Top-level Entity Name              ; CPU                                         ;
@@ -218,25 +218,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ProgramMemory:program_memory"                                                                    ;
-+-------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port              ; Type   ; Severity ; Details                                                                             ;
-+-------------------+--------+----------+-------------------------------------------------------------------------------------+
-; write_data        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; mem_write         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; mem_read          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; read_data[27..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ProgramMemory:program_memory"                                                                                                                                                                   ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address           ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; write_data        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; read_data[27..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "ProgramCounter:pc" ;
-+--------+-------+----------+-------------------+
-; Port   ; Type  ; Severity ; Details           ;
-+--------+-------+----------+-------------------+
-; enable ; Input ; Info     ; Stuck at VCC      ;
-+--------+-------+----------+-------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ProgramCounter:pc"                                                                                                                              ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; enable   ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; jump     ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jumpAddr ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -245,100 +246,104 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 16 10:20:29 2024
+    Info: Processing started: Mon Apr 22 08:19:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file add_with_carry_32bit.v
-    Info (12023): Found entity 1: add_with_carry_32bit File: D:/Logica programable/ALU/add_with_carry_32bit.v Line: 1
+    Info (12023): Found entity 1: add_with_carry_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/add_with_carry_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.v
-    Info (12023): Found entity 1: full_adder File: D:/Logica programable/ALU/full_adder.v Line: 1
+    Info (12023): Found entity 1: full_adder File: C:/Users/artur/OneDrive/Desktop/ALU/full_adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file add_32bit.v
-    Info (12023): Found entity 1: add_32bit File: D:/Logica programable/ALU/add_32bit.v Line: 1
+    Info (12023): Found entity 1: add_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/add_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate.v
-    Info (12023): Found entity 1: and_gate File: D:/Logica programable/ALU/and_gate.v Line: 1
+    Info (12023): Found entity 1: and_gate File: C:/Users/artur/OneDrive/Desktop/ALU/and_gate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ands_32bit.v
-    Info (12023): Found entity 1: ands_32bit File: D:/Logica programable/ALU/ands_32bit.v Line: 1
+    Info (12023): Found entity 1: ands_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/ands_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bit_compare.v
-    Info (12023): Found entity 1: bit_compare File: D:/Logica programable/ALU/bit_compare.v Line: 1
+    Info (12023): Found entity 1: bit_compare File: C:/Users/artur/OneDrive/Desktop/ALU/bit_compare.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cmp_32bit.v
-    Info (12023): Found entity 1: cmp_32bit File: D:/Logica programable/ALU/cmp_32bit.v Line: 1
+    Info (12023): Found entity 1: cmp_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/cmp_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_32bit.v
-    Info (12023): Found entity 1: multiplier_32bit File: D:/Logica programable/ALU/multiplier_32bit.v Line: 1
+    Info (12023): Found entity 1: multiplier_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/multiplier_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_gate.v
-    Info (12023): Found entity 1: or_gate File: D:/Logica programable/ALU/or_gate.v Line: 1
+    Info (12023): Found entity 1: or_gate File: C:/Users/artur/OneDrive/Desktop/ALU/or_gate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file orrs_32bit.v
-    Info (12023): Found entity 1: orrs_32bit File: D:/Logica programable/ALU/orrs_32bit.v Line: 1
+    Info (12023): Found entity 1: orrs_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/orrs_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file complement_to_two.v
-    Info (12023): Found entity 1: complement_to_two File: D:/Logica programable/ALU/complement_to_two.v Line: 1
+    Info (12023): Found entity 1: complement_to_two File: C:/Users/artur/OneDrive/Desktop/ALU/complement_to_two.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rsbs_32bit.v
-    Info (12023): Found entity 1: rsbs_32bit File: D:/Logica programable/ALU/rsbs_32bit.v Line: 1
+    Info (12023): Found entity 1: rsbs_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/rsbs_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_subtractor.v
-    Info (12023): Found entity 1: full_subtractor File: D:/Logica programable/ALU/full_subtractor.v Line: 1
+    Info (12023): Found entity 1: full_subtractor File: C:/Users/artur/OneDrive/Desktop/ALU/full_subtractor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file subtractor_32bit.v
-    Info (12023): Found entity 1: subtractor_32bit File: D:/Logica programable/ALU/subtractor_32bit.v Line: 1
+    Info (12023): Found entity 1: subtractor_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/subtractor_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sub_32bit.v
-    Info (12023): Found entity 1: sub_32bit File: D:/Logica programable/ALU/sub_32bit.v Line: 1
+    Info (12023): Found entity 1: sub_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/sub_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: D:/Logica programable/ALU/alu.v Line: 1
+    Info (12023): Found entity 1: alu File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file aluu.v
-    Info (12023): Found entity 1: ALUU File: D:/Logica programable/ALU/ALUU.v Line: 2
+    Info (12023): Found entity 1: ALUU File: C:/Users/artur/OneDrive/Desktop/ALU/ALUU.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb_alu.v
-    Info (12023): Found entity 1: tb_ALU File: D:/Logica programable/ALU/tb_ALU.v Line: 3
+    Info (12023): Found entity 1: tb_ALU File: C:/Users/artur/OneDrive/Desktop/ALU/tb_ALU.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
-    Info (12023): Found entity 1: ProgramCounter File: D:/Logica programable/ALU/ProgramCounter.v Line: 1
+    Info (12023): Found entity 1: ProgramCounter File: C:/Users/artur/OneDrive/Desktop/ALU/ProgramCounter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file programmemory.v
-    Info (12023): Found entity 1: ProgramMemory File: D:/Logica programable/ALU/ProgramMemory.v Line: 1
+    Info (12023): Found entity 1: ProgramMemory File: C:/Users/artur/OneDrive/Desktop/ALU/ProgramMemory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
-    Info (12023): Found entity 1: CPU File: D:/Logica programable/ALU/CPU.v Line: 1
+    Info (12023): Found entity 1: CPU File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_add_with_carry_32bit.v
-    Info (12023): Found entity 1: tb_add_with_carry_32bit File: D:/Logica programable/ALU/tb_add_with_carry_32bit.v Line: 2
+    Info (12023): Found entity 1: tb_add_with_carry_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/tb_add_with_carry_32bit.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate_tb.v
-    Info (12023): Found entity 1: and_gate_tb File: D:/Logica programable/ALU/and_gate_tb.v Line: 3
+    Info (12023): Found entity 1: and_gate_tb File: C:/Users/artur/OneDrive/Desktop/ALU/and_gate_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file orrs_32bit_tb.v
-    Info (12023): Found entity 1: orrs_32bit_tb File: D:/Logica programable/ALU/orrs_32bit_tb.v Line: 3
+    Info (12023): Found entity 1: orrs_32bit_tb File: C:/Users/artur/OneDrive/Desktop/ALU/orrs_32bit_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file rsbs_32bit_tb.v
-    Info (12023): Found entity 1: rsbs_32bit_tb File: D:/Logica programable/ALU/rsbs_32bit_tb.v Line: 3
+    Info (12023): Found entity 1: rsbs_32bit_tb File: C:/Users/artur/OneDrive/Desktop/ALU/rsbs_32bit_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_subtractor_32bit.v
-    Info (12023): Found entity 1: testbench_subtractor_32bit File: D:/Logica programable/ALU/testbench_subtractor_32bit.v Line: 3
+    Info (12023): Found entity 1: testbench_subtractor_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/testbench_subtractor_32bit.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_multiplier_32bit.v
-    Info (12023): Found entity 1: testbench_multiplier_32bit File: D:/Logica programable/ALU/testbench_multiplier_32bit.v Line: 3
+    Info (12023): Found entity 1: testbench_multiplier_32bit File: C:/Users/artur/OneDrive/Desktop/ALU/testbench_multiplier_32bit.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_programcounter.v
-    Info (12023): Found entity 1: testbench_ProgramCounter File: D:/Logica programable/ALU/testbench_ProgramCounter.v Line: 3
+    Info (12023): Found entity 1: testbench_ProgramCounter File: C:/Users/artur/OneDrive/Desktop/ALU/testbench_ProgramCounter.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_programmemory.v
-    Info (12023): Found entity 1: testbench_ProgramMemory File: D:/Logica programable/ALU/testbench_ProgramMemory.v Line: 3
+    Info (12023): Found entity 1: testbench_ProgramMemory File: C:/Users/artur/OneDrive/Desktop/ALU/testbench_ProgramMemory.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_cpu.v
-    Info (12023): Found entity 1: testbench_CPU File: D:/Logica programable/ALU/testbench_CPU.v Line: 3
+    Info (12023): Found entity 1: testbench_CPU File: C:/Users/artur/OneDrive/Desktop/ALU/testbench_CPU.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(33): created implicit net for "mem_write" File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(34): created implicit net for "mem_read" File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 34
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: D:/Logica programable/ALU/CPU.v Line: 28
-Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:program_memory" File: D:/Logica programable/ALU/CPU.v Line: 38
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_unit" File: D:/Logica programable/ALU/CPU.v Line: 56
-Warning (10240): Verilog HDL Always Construct warning at alu.v(26): inferring latch(es) for variable "cout", which holds its previous value in one or more paths through the always construct File: D:/Logica programable/ALU/alu.v Line: 26
-Info (10041): Inferred latch for "cout" at alu.v(26) File: D:/Logica programable/ALU/alu.v Line: 26
-Info (12128): Elaborating entity "add_with_carry_32bit" for hierarchy "alu:alu_unit|add_with_carry_32bit:adder" File: D:/Logica programable/ALU/alu.v Line: 17
-Info (12128): Elaborating entity "full_adder" for hierarchy "alu:alu_unit|add_with_carry_32bit:adder|full_adder:fa0" File: D:/Logica programable/ALU/add_with_carry_32bit.v Line: 11
-Info (12128): Elaborating entity "ands_32bit" for hierarchy "alu:alu_unit|ands_32bit:ander" File: D:/Logica programable/ALU/alu.v Line: 18
-Info (12128): Elaborating entity "and_gate" for hierarchy "alu:alu_unit|ands_32bit:ander|and_gate:and_loop[0].ag" File: D:/Logica programable/ALU/ands_32bit.v Line: 9
-Info (12128): Elaborating entity "orrs_32bit" for hierarchy "alu:alu_unit|orrs_32bit:orer" File: D:/Logica programable/ALU/alu.v Line: 19
-Info (12128): Elaborating entity "or_gate" for hierarchy "alu:alu_unit|orrs_32bit:orer|or_gate:or_loop[0].og" File: D:/Logica programable/ALU/orrs_32bit.v Line: 9
-Info (12128): Elaborating entity "rsbs_32bit" for hierarchy "alu:alu_unit|rsbs_32bit:rsber" File: D:/Logica programable/ALU/alu.v Line: 20
-Info (12128): Elaborating entity "complement_to_two" for hierarchy "alu:alu_unit|rsbs_32bit:rsber|complement_to_two:negation" File: D:/Logica programable/ALU/rsbs_32bit.v Line: 7
-Info (12128): Elaborating entity "subtractor_32bit" for hierarchy "alu:alu_unit|subtractor_32bit:subber" File: D:/Logica programable/ALU/alu.v Line: 21
-Info (12128): Elaborating entity "full_subtractor" for hierarchy "alu:alu_unit|subtractor_32bit:subber|full_subtractor:fs0" File: D:/Logica programable/ALU/subtractor_32bit.v Line: 9
-Info (12128): Elaborating entity "multiplier_32bit" for hierarchy "alu:alu_unit|multiplier_32bit:muler" File: D:/Logica programable/ALU/alu.v Line: 22
-Warning (10240): Verilog HDL Always Construct warning at multiplier_32bit.v(10): inferring latch(es) for variable "adder_output", which holds its previous value in one or more paths through the always construct File: D:/Logica programable/ALU/multiplier_32bit.v Line: 10
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file D:/Logica programable/ALU/output_files/alu.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4705 megabytes
-    Info: Processing ended: Tue Apr 16 10:20:41 2024
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(12): object "jumpAddress" assigned a value but never read File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 12
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(13): object "isJump" assigned a value but never read File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 13
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 26
+Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:program_memory" File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 36
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_unit" File: C:/Users/artur/OneDrive/Desktop/ALU/CPU.v Line: 58
+Warning (10240): Verilog HDL Always Construct warning at alu.v(26): inferring latch(es) for variable "cout", which holds its previous value in one or more paths through the always construct File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 26
+Info (10041): Inferred latch for "cout" at alu.v(26) File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 26
+Info (12128): Elaborating entity "add_with_carry_32bit" for hierarchy "alu:alu_unit|add_with_carry_32bit:adder" File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 17
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu:alu_unit|add_with_carry_32bit:adder|full_adder:fa0" File: C:/Users/artur/OneDrive/Desktop/ALU/add_with_carry_32bit.v Line: 11
+Info (12128): Elaborating entity "ands_32bit" for hierarchy "alu:alu_unit|ands_32bit:ander" File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 18
+Info (12128): Elaborating entity "and_gate" for hierarchy "alu:alu_unit|ands_32bit:ander|and_gate:and_loop[0].ag" File: C:/Users/artur/OneDrive/Desktop/ALU/ands_32bit.v Line: 9
+Info (12128): Elaborating entity "orrs_32bit" for hierarchy "alu:alu_unit|orrs_32bit:orer" File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 19
+Info (12128): Elaborating entity "or_gate" for hierarchy "alu:alu_unit|orrs_32bit:orer|or_gate:or_loop[0].og" File: C:/Users/artur/OneDrive/Desktop/ALU/orrs_32bit.v Line: 9
+Info (12128): Elaborating entity "rsbs_32bit" for hierarchy "alu:alu_unit|rsbs_32bit:rsber" File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 20
+Info (12128): Elaborating entity "complement_to_two" for hierarchy "alu:alu_unit|rsbs_32bit:rsber|complement_to_two:negation" File: C:/Users/artur/OneDrive/Desktop/ALU/rsbs_32bit.v Line: 7
+Info (12128): Elaborating entity "subtractor_32bit" for hierarchy "alu:alu_unit|subtractor_32bit:subber" File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 21
+Info (12128): Elaborating entity "full_subtractor" for hierarchy "alu:alu_unit|subtractor_32bit:subber|full_subtractor:fs0" File: C:/Users/artur/OneDrive/Desktop/ALU/subtractor_32bit.v Line: 9
+Info (12128): Elaborating entity "multiplier_32bit" for hierarchy "alu:alu_unit|multiplier_32bit:muler" File: C:/Users/artur/OneDrive/Desktop/ALU/alu.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at multiplier_32bit.v(10): inferring latch(es) for variable "adder_output", which holds its previous value in one or more paths through the always construct File: C:/Users/artur/OneDrive/Desktop/ALU/multiplier_32bit.v Line: 10
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/artur/OneDrive/Desktop/ALU/output_files/alu.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Mon Apr 22 08:19:25 2024
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in D:/Logica programable/ALU/output_files/alu.map.smsg.
+The suppressed messages can be found in C:/Users/artur/OneDrive/Desktop/ALU/output_files/alu.map.smsg.
 
 

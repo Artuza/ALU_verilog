@@ -1,9 +1,11 @@
 module ProgramCounter(
-    input clk,            // Señal de reloj
-    input reset,          // Señal de reinicio
-    input [31:0] nextPC,  // Próxima dirección de PC
-    input enable,         // Habilitar actualización del PC
-    output reg [31:0] pc  // Valor actual del PC
+    input clk,            
+    input reset,          
+    input [31:0] nextPC,  
+    input enable,         
+    input jump,           // Señal para realizar un salto
+    input [31:0] jumpAddr, // Dirección de salto
+    output reg [31:0] pc  
 );
 
     // Inicialización y actualización del PC
@@ -11,7 +13,11 @@ module ProgramCounter(
         if (reset) begin
             pc <= 32'b0; // Valor inicial del PC tras reset
         end else if (enable) begin
-            pc <= nextPC; // Actualiza el PC si está habilitado
+            if (jump) begin
+                pc <= jumpAddr;  // Si hay salto, PC toma la dirección de salto
+            end else begin
+                pc <= nextPC;    // Actualiza el PC normalmente si no hay salto
+            end
         end
     end
 
