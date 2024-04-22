@@ -124,6 +124,8 @@ set_global_assignment -name EDA_TEST_BENCH_FILE testbench_multiplier_32bit.v -se
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench_ProgramCounter.v -section_id testbench_ProgramCounter
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench_ProgramMemory.v -section_id testbench_ProgramMemory
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench_CPU.v -section_id testbench_CPU
+set_global_assignment -name VERILOG_FILE InstructionDecoder.v
+set_global_assignment -name VERILOG_FILE RegisterFile.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
